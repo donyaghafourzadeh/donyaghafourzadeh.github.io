@@ -8,10 +8,10 @@
 <meta property="og:title" content="Donya Ghafourzadeh, PhD">
 <meta property="og:description" content="Software engineer and AI scientist: backend systems, tools, 3D graphics and applied AI.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔷</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230F1638'/><text x='50' y='64' font-family='Arial,Helvetica,sans-serif' font-size='44' font-weight='700' fill='white' text-anchor='middle'>DG</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F6F7FB; --surface:#FFFFFF; --ink:#1B1F3B; --muted:#5B6180; --line:#DDE1EE;
@@ -19,7 +19,7 @@
   --blue:#3D5AFE; --teal:#00A3A3; --pink:#E8407F; --amber:#F2A516; --violet:#7B5CFF;
   --t-about:#EEF1FF; --t-exp:#E7F6F5; --t-pub:#FFEFF5; --t-pat:#FFF5E2;
   --accent:var(--blue); --accent-2:var(--pink);
-  --sans:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --sans:"Inter","Helvetica Neue",Arial,sans-serif;
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   color-scheme:light; box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
@@ -277,6 +277,36 @@ footer{position:relative; z-index:1; padding:2.5rem 0 2.5rem; color:var(--hero-m
 .fig .rig-video, .fig .media{width:100%; max-width:520px; margin-left:auto; margin-right:auto}
 .fig .media.dent{max-width:720px}
 .fig .media.img{max-width:820px}
+
+/* ---- refined typography & controls ---- */
+body{font-size:1rem; line-height:1.65}
+.brand{font-weight:600; letter-spacing:-.01em}
+.brand i{display:none}
+.nav ul a{font-size:.9rem; font-weight:500}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4.1rem); line-height:1.05; letter-spacing:-.03em; font-weight:700}
+.role{font-size:1.15rem; line-height:1.55; max-width:40ch}
+.portrait{width:160px; height:160px; padding:3px}
+@media (max-width:860px){.portrait{width:128px; height:128px}}
+.btn{border-radius:8px; border-width:1px; font-weight:600; font-size:.95rem; padding:.7rem 1.2rem; transition:background-color .15s, border-color .15s}
+.btn:hover{transform:none}
+.hero .btn.ghost, .contact .btn.ghost{border-color:rgba(255,255,255,.4)}
+.hero .btn.ghost:hover, .contact .btn.ghost:hover{border-color:#fff; background:rgba(255,255,255,.08)}
+.hero .btn.primary:hover, .contact .btn.primary:hover{background:#E4E8F6; border-color:#E4E8F6}
+.band{padding:4rem 0}
+.band h2{font-size:clamp(1.6rem,3vw,2.15rem); font-weight:700; letter-spacing:-.02em}
+.lede{font-size:1.3rem}
+.fig h3, .what h3, .edu h3, .cards h3{font-weight:600}
+.yr{font-weight:700}
+.feat-card:hover{transform:none}
+.when{white-space:nowrap}
+@media (min-width:721px){
+  .timeline::before{left:11rem}
+  .timeline > li{grid-template-columns:11rem 1fr}
+  .timeline > li::after{left:calc(11rem - 6px)}
+}
+.contact{padding:4.5rem 0 3rem}
+.contact h2{font-size:clamp(1.8rem,3.4vw,2.5rem); font-weight:700; letter-spacing:-.02em; margin:0 0 1.75rem}
+footer{border-top:1px solid rgba(255,255,255,.12); padding:1.5rem 0 2rem}
 </style>
 </head>
 <body>
@@ -286,11 +316,11 @@ footer{position:relative; z-index:1; padding:2.5rem 0 2.5rem; color:var(--hero-m
     <a class="brand" href="#top"><i aria-hidden="true"></i>Donya Ghafourzadeh</a>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
+      <li><a href="#research">Projects</a></li>
       <li><a href="#featured">Featured</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#patents">Patents, awards &amp; service</a></li>
+      <li><a href="#patents">Patents &amp; awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -305,7 +335,7 @@ footer{position:relative; z-index:1; padding:2.5rem 0 2.5rem; color:var(--hero-m
       <p class="role">Software engineer and AI scientist. I design and build reliable software end to end, from backend systems, pipelines and tools to 3D graphics and applied AI.</p>
       <div class="actions">
         <a class="btn primary" href="Donya_Ghafourzadeh_CV.pdf" download>Download CV</a>
-        <a class="btn ghost" href="mailto:gh.dony@gmail.com">Email me</a>
+        <a class="btn ghost" href="mailto:gh.dony@gmail.com">Email</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/donya-ghafourzadeh/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
@@ -320,9 +350,9 @@ footer{position:relative; z-index:1; padding:2.5rem 0 2.5rem; color:var(--hero-m
     <h2>About</h2>
     <div class="about-grid">
       <div>
-        <p class="lede">I’ve spent more than eight years building tools at the meeting point of computer graphics, computer vision and machine learning.</p>
-        <p>My PhD at ÉTS Montréal focused on reconstructing, transferring and editing 3D surfaces, with industrial collaborations at Autodesk and Ubisoft. At Ubisoft I helped build FaceShifter, a production system for generating and editing 3D faces at scale. Today at SmileShape I design the geometry algorithms behind automated dental CAD, turning scanned anatomy into manufacturable dentures.</p>
-        <p>I enjoy the whole path: reading the paper, writing the C++ or Python, and making sure the tool actually helps the artist, designer or clinician using it.</p>
+        <p class="lede">I’ve spent more than eight years building production tools at the intersection of computer graphics and machine learning.</p>
+        <p>My PhD at ÉTS Montréal focused on reconstructing, transferring and editing 3D surfaces, with industrial collaborations at Autodesk and Ubisoft. At Ubisoft, I turned my PhD research on part-based 3D face models into a working prototype. After the studio’s artists reviewed and approved it, the prototype grew into FaceShifter, Ubisoft’s production system for generating and editing 3D faces at scale. Today at SmileShape I design the geometry algorithms behind automated dental CAD, turning scanned anatomy into manufacturable dentures.</p>
+        <p>I work across the full path from research to production: studying the literature, implementing in C++ and Python, and making sure each tool genuinely serves the artists, designers and clinicians who rely on it.</p>
       </div>
       <dl class="facts">
         <div style="--c:var(--blue)"><dt>Now</dt><dd>AI Scientist, SmileShape (Toronto)</dd></div>
@@ -585,8 +615,7 @@ footer{position:relative; z-index:1; padding:2.5rem 0 2.5rem; color:var(--hero-m
   </div></section>
 
   <div class="contact-band"><div class="wrap"><section class="contact" id="contact">
-    <h2>Let’s build something great together.</h2>
-    <p>I’m open to software engineering and software development roles, as well as R&amp;D in 3D graphics, computer vision and applied AI. The quickest way to reach me is email.</p>
+    <h2>Get in touch</h2>
     <div class="actions">
       <a class="btn primary" href="mailto:gh.dony@gmail.com">gh.dony@gmail.com</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/donya-ghafourzadeh/" target="_blank" rel="noopener">LinkedIn</a>
